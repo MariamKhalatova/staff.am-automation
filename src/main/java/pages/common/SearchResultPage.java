@@ -6,11 +6,10 @@ import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SearchResultPage {
-    private WebDriver driver;
+public class SearchResultPage extends HomePage {
 
     public SearchResultPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
 

@@ -16,7 +16,7 @@ import java.time.Duration;
 
 public class HomePage {
     // Homepage Fields
-    private WebDriver driver;
+    protected WebDriver driver;
     private By citiesFilter = By.id(HomePageConstants.citiesFilterID);
     private By searchButton = By.xpath(HomePageConstants.searchButton);
     private By forJobSeekersDrp = By.xpath(HomePageConstants.forJobSeekersDrp);

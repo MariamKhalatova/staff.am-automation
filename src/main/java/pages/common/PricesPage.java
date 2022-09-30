@@ -8,12 +8,10 @@ import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PricesPage {
-
-    private WebDriver driver;
+public class PricesPage extends HomePage {
 
     public PricesPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     int itemsCount;

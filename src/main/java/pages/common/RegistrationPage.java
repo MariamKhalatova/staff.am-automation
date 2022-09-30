@@ -11,11 +11,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.nio.channels.NotYetBoundException;
 import java.time.Duration;
 
-public class RegistrationPage {
-    private WebDriver driver;
+public class RegistrationPage extends HomePage {
 
     public RegistrationPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     private By firstNameInput = By.id(RegistrationPageConstants.firstNameInput);
@@ -27,9 +26,8 @@ public class RegistrationPage {
     public By passwordInput = By.id(RegistrationPageConstants.passwordInput);
     public By repeatPasswordInput = By.id(RegistrationPageConstants.confirmPasswordInput);
 
-
     public void inputFirstName() throws InterruptedException {
-        new WebDriverWait(driver, Duration.ofSeconds(20)).until(ExpectedConditions.visibilityOfElementLocated(firstNameInput));
+       new WebDriverWait(driver, Duration.ofSeconds(20)).until(ExpectedConditions.visibilityOfElementLocated(firstNameInput));
         driver.findElement(firstNameInput).sendKeys("Mariam");
     }
 
@@ -53,20 +51,5 @@ public class RegistrationPage {
         Select selectObj = new Select(driver.findElement(element));
         selectObj.selectByVisibleText(visibleValue);
     }
-
-
-    /*public void input(By element, String inputText){
-        driver.findElement(element).sendKeys(inputText);
-    } */
-
-    /*public void ff (String elementType) {
-        switch (elementType) {
-            case "firstName":
-                input();
-            case "lastName"
-        }
-    }*/
-
-
 
 }
