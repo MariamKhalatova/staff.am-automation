@@ -20,15 +20,14 @@ public class SearchTests extends BaseTests {
     2 . Choose Gyumri city in city filter field
     3 . Tap search */
 
-    public void testSearchByCity() throws InterruptedException {
-        By radio = homepage.getJobsRadioButton();
-        homepage.verifyRadioButtonIsSelected();
+    public void testSearchByCity() {
+        homepage.getJobsRadioButton();
+        Assert.assertTrue(homepage.verifyRadioButtonIsSelected());
         homepage.setCityFilter("Gyumri");
-        SearchResultPage searchpage = homepage.clickSearchButton();
-        List<WebElement> results = searchpage.createListOfGyumriJobs();
+        SearchResultPage searchPage = homepage.clickSearchButton();
+        List<WebElement> results = searchPage.createListOfGyumriJobs();
         for (WebElement result : results) {
             Assert.assertTrue(result.getText().contains("Gyumri"));
         }
-
     }
 }
