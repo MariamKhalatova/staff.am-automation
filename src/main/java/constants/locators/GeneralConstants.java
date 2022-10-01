@@ -2,6 +2,6 @@ package constants.locators;
 
 public class GeneralConstants {
    public static int shortWait = 3;
-    int mediumWait = 7;
-    int longWait = 15;
+   public static int mediumWait = 7;
+   public static int longWait = 15;
 }
