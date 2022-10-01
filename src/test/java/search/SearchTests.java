@@ -29,5 +29,6 @@ public class SearchTests extends BaseTests {
         for (WebElement result : results) {
             Assert.assertTrue(result.getText().contains("Gyumri"));
         }
+
     }
 }

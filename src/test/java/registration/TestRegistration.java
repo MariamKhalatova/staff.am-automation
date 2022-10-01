@@ -13,7 +13,6 @@ public class TestRegistration extends BaseTests {
         RegistrationPage registrationPage = homepage.selectRegisterFromDrp();
         registrationPage.inputFirstName();
         registrationPage.inputLastname();
-        //ask if better to have with 1 method == registrationPage.input();
         registrationPage.selectDrpValue(registrationPage.dayDrp, "24");
         registrationPage.selectDrpValue(registrationPage.monthDrp, "October");
         registrationPage.selectDrpValue(registrationPage.yearDrp, "1996");

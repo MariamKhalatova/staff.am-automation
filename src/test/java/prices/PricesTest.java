@@ -21,9 +21,7 @@ public class PricesTest extends BaseTests {
         for (int i = 0; i < items.size(); i++) {
             WebElement item = items.get(i);
             String attribute = item.getAttribute("class");
-
             System.out.println(attribute);
-
             Assert.assertTrue(attribute.contains(i < 2 ? "on" : "off"));
         }
 
