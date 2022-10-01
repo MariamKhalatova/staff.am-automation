@@ -31,7 +31,7 @@ public class HomePage {
         new WebDriverWait(driver, Duration.ofSeconds(durationSeconds))
                 .until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
-    
+
     //Homepage constructor
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -53,7 +53,8 @@ public class HomePage {
     }
 
     public void setCityFilter(String cityName) {
-        Select countries = new Select(driver.findElement(By.id(HomePageConstants.citiesFilterID)));
+       // Select countries = new Select(driver.findElement(By.id(HomePageConstants.citiesFilterID)));
+        Select countries = new Select(driver.findElement(citiesFilter);
         countries.selectByVisibleText(cityName);
         WebElement option = countries.getFirstSelectedOption();
         new WebDriverWait(driver, Duration.ofSeconds(20)).until(ExpectedConditions.textToBePresentInElement(option, cityName));

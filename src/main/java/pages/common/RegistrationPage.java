@@ -1,11 +1,14 @@
 package pages.common;
 
+import constants.locators.GeneralConstants;
 import constants.locators.RegistrationPageConstants;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.time.Duration;
 
 public class RegistrationPage extends HomePage {
@@ -24,7 +27,7 @@ public class RegistrationPage extends HomePage {
     public By repeatPasswordInput = By.id(RegistrationPageConstants.confirmPasswordInput);
 
     public void inputFirstName() throws InterruptedException {
-       new WebDriverWait(driver, Duration.ofSeconds(20)).until(ExpectedConditions.visibilityOfElementLocated(firstNameInput));
+        waitForElementVisible(firstNameInput, GeneralConstants.mediumWait);
         driver.findElement(firstNameInput).sendKeys("Mariam");
     }
 
